@@ -93,39 +93,36 @@
         .footer-links {
             margin: 10px 0;
         }
-        .review-cards {
-    display: flex;
-    justify-content: flex-start; /* Align the cards to the left */
-    flex-wrap: nowrap; /* Prevent cards from wrapping */
-    overflow-x: auto; /* Add horizontal scrolling if needed */
-    gap: 20px; /* Optional: add some space between the cards */
-        }
-        .review-cards {
-    display: flex;
-    justify-content: flex-start; /* Align the cards to the left */
-    flex-wrap: nowrap; /* Prevent wrapping */
-    overflow-x: auto; /* Add horizontal scrolling if the cards exceed the container width */
-    gap: 20px; /* Add space between the cards */
-    padding: 20px 0; /* Optional: add some vertical padding */
+          .review-section {
+            margin-top: 40px;
         }
         .review-card {
-    width: 250px; /* Adjust the width of the card */
-    margin: 15px 0; /* Adjust vertical margin */
-    text-align: left;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 15px;
+            flex: 1 1 calc(30% - 20px);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
         }
         .review-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px 10px 0 0;
+            max-width: 70px;
+            border-radius: 50%;
+            margin-bottom: 10px;
         }
-        .review-card h3 {
-    margin: 10px;
+        .reviews {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        @media (max-width: 768px) {
+            .card, .review-card {
+                flex: 1 1 calc(100% - 20px);
+            }
         }
     </style>
+        
 </head>
 <body>
 
@@ -184,25 +181,28 @@
     <p>Q2: How can I contact customer service?</p>
     <p>A2: You can reach us via email at support@gemstones.com.</p>
 </section>
+    <div class="review-section">
+            <h2>Customer Reviews</h2>
+            <div class="reviews">
+                <div class="review-card">
+                    <img src="https://via.placeholder.com/70" alt="John Doe">
+                    <h4>John Doe</h4>
+                    <p>Great quality sunglasses! Highly recommend.</p>
+                </div>
+                <div class="review-card">
+                    <img src="https://via.placeholder.com/70" alt="Jane Smith">
+                    <h4>Jane Smith</h4>
+                    <p>Love my new wallet! Perfect size.</p>
+                </div>
+                <div class="review-card">
+                    <img src="https://via.placeholder.com/70" alt="Emily Johnson">
+                    <h4>Emily Johnson</h4>
+                    <p>This watch is stunning! A must-have.</p>
+                </div>
+</body>
+</html>
 
-<section id="reviews" class="reviews">
-    <h2>Customer Reviews</h2>
-    <div class="review-card">
-        <img src="https://i.pinimg.com/originals/78/8e/89/788e89de3a61b2b269349d22464ca1f8.jpg" alt="Customer 1">
-        <h3>Jane Doe</h3>
-        <p>"Absolutely love my new necklace! Stunning quality."</p>
-    </div>
-    <div class="review-card">
-        <img src="https://i.pinimg.com/736x/d4/aa/de/d4aade0ae19afd82a0834182673ddb51.jpg" alt="Customer 2">
-        <h3>John Smith</h3>
-        <p>"Great service and beautiful pieces. Highly recommend!"</p>
-    </div>
-    <div class="review-card">
-        <img src="https://i.pinimg.com/736x/ba/d9/6b/bad96b180120c6775a0da33ecefcc93c.jpg" alt="Customer 3">
-        <h3>Emily Johnson</h3>
-        <p>"The earrings are gorgeous! I'll definitely be back for more."</p>
-    </div>
-</section>
+
 
 <footer>
     <div class="footer-links">
